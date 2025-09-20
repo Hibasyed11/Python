@@ -19,3 +19,12 @@ for i in range (1,6):
     for j in range (1,i+1):
         print(j,end="")
     print()
+
+    i=1
+while i<=10:
+    j=1
+    while j<=10:
+        print("{0} x {1} = {2}".format(i,j,i*j))
+        j+=1
+    i+=1    
+    print('')
