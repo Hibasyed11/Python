@@ -1,0 +1,59 @@
+#ABSTRACTION
+from abc import ABC, abstractmethod
+class absmethod():
+    def print(self,x):
+        print("Passed Value:",x)
+    @abstractmethod
+    def task(self):
+        print("We are inside the absclass task")
+class test_class(absmethod):
+    def task(self):
+        print("We are inside the test_class task")
+test_obj=test_class()
+test_obj.task()
+test_obj.print(100)
+
+class Animals(ABC):
+    def move(self):
+        pass
+class humans(Animals):
+    def move(self):
+        print("I can walk and run")
+class dogs(Animals):
+    def move(self):
+        print("I can roll around")
+class snakes(Animals):
+    def move(self):
+        print("I can slither")
+class lions(Animals):
+    def move(self):
+        print("I can pounce")
+h=humans()
+h.move()
+d=dogs()
+d.move()
+s=snakes()
+s.move()
+l=lions()
+l.move()
+
+#POLYMOREHISM
+class India():
+    def capital(self):
+        print("New Dehli is the capital of India")
+    def language(self):
+        print("Hindi is the most widely spoken language in India")
+    def type(self):
+        print("India is a semi-periphery country")
+class France():
+    def capital(self):
+        print("Paris is the capital of France")
+    def language(self):
+        print("French is the most widely spoken language in France")
+    def type(self):
+        print("France is a core country")
+obj_ind=India()
+obj_france=France()
+for country in (obj_ind, obj_france):
+    country.capital()
+    country.language()
